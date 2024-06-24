@@ -19,7 +19,7 @@ const Navbar = () => {
 			{
 				user ?
 					<div className="flex items-center gap-2">
-						<p className="text-xl hidden md:block">{user.user_metadata?.user_name || user.email}</p>
+						<p className="text-xl font-bold hidden md:block">{user.user_metadata?.user_name || user.email}</p>
 						<Menu>
 							{
 								user.user_metadata?.avatar_url ?
@@ -64,7 +64,7 @@ const Menu = ({ children, className }: { children: ReactNode, className?: string
 						Dashboard
 					</Link>
 				</DropdownMenuItem>
-				<DropdownMenuItem onClick={logout}>
+				<DropdownMenuItem onClick={logout} className="cursor-pointer">
 					Logout
 				</DropdownMenuItem>
 			</DropdownMenuContent>
