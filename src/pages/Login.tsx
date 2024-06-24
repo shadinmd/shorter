@@ -10,6 +10,7 @@ const Login = () => {
 			<Navbar />
 			<div className="flex flex-col text-white w-96 pt-20 px-5">
 				<Auth
+					redirectTo={`${window.location.origin}/dashboard`}
 					supabaseClient={supabase}
 					providers={["github"]}
 					appearance={{
