@@ -18,7 +18,7 @@ const Home = () => {
 	return (
 		<div className="flex flex-col items-center h-screen text-white bg-black">
 			<Navbar />
-			<div className="flex flex-col items-center mt-32 h-full w-full">
+			<div className="flex flex-col items-center mt-32 h-full w-full px-5 text-center">
 				<p className="text-5xl font-bold">Shorter</p>
 				<p className="text-lg font-semibold mt-5">
 					Turn lengthy web addresses into compact, manageable links.<br />

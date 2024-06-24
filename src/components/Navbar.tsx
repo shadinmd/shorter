@@ -11,7 +11,7 @@ const Navbar = () => {
 	const { user } = useAuth()
 
 	return (
-		<header className="flex text-white items-center justify-between px-20 py-5 w-full">
+		<header className="flex text-white items-center justify-between px-5 py-2 md:px-20 md:py-5 w-full">
 			<Link to="/" className="text-4xl font-semibold">
 				Shorter
 			</Link>
@@ -19,7 +19,7 @@ const Navbar = () => {
 			{
 				user ?
 					<div className="flex items-center gap-2">
-						<p className="text-xl">{user.user_metadata?.user_name || user.email}</p>
+						<p className="text-xl hidden md:block">{user.user_metadata?.user_name || user.email}</p>
 						<Menu>
 							{
 								user.user_metadata?.avatar_url ?

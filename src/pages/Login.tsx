@@ -8,7 +8,7 @@ const Login = () => {
 	return (
 		<div className="flex flex-col items-center h-screen bg-black">
 			<Navbar />
-			<div className="flex flex-col text-white w-96 pt-20">
+			<div className="flex flex-col text-white w-96 pt-20 px-5">
 				<Auth
 					supabaseClient={supabase}
 					providers={["github"]}
