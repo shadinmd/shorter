@@ -4,7 +4,11 @@ export default {
 		"./src/**/*.tsx"
 	],
   theme: {
-    extend: {},
+    extend: {
+			colors: {
+				"custom-gray" : "#101010"
+			}
+		},
   },
   plugins: [],
 }
