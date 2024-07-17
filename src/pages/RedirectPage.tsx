@@ -15,7 +15,6 @@ const RedirectPage = () => {
 	const id = params.id
 
 	useEffect(() => {
-
 		supabase
 			.from("urls")
 			.select("*")
@@ -33,6 +32,21 @@ const RedirectPage = () => {
 				if (data.length < 1) {
 					setStatus("NOTFOUND")
 				}
+
+				supabase
+					.from("click")
+					.insert({
+						url_id: id
+					})
+					.then(({ data, error }) => {
+
+						if (error) {
+							console.log("click not registered")
+							console.log(error)
+						}
+
+						console.log(data)
+					})
 
 				window.location.assign(data[0].redirect_url)
 				setStatus("SUCCESS")
