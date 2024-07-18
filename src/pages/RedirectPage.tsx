@@ -27,8 +27,6 @@ const RedirectPage = () => {
 					return
 				}
 
-				console.log(data)
-
 				if (data.length < 1) {
 					setStatus("NOTFOUND")
 				}
@@ -38,14 +36,12 @@ const RedirectPage = () => {
 					.insert({
 						url_id: id
 					})
-					.then(({ data, error }) => {
+					.then(({ error }) => {
 
 						if (error) {
 							console.log("click not registered")
 							console.log(error)
 						}
-
-						console.log(data)
 					})
 
 				window.location.assign(data[0].redirect_url)
