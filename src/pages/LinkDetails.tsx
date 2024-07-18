@@ -5,6 +5,7 @@ import { toast } from "sonner"
 import URL from "../types/url.type"
 import Click from "../types/click.type"
 import Navbar from "../components/Navbar"
+import { PuffLoader } from "react-spinners"
 
 const LinkDetails = () => {
 
@@ -82,7 +83,7 @@ const LinkDetails = () => {
 			{
 				loading ?
 					<div className="flex items-center justify-center w-full h-full">
-						<p className="text-4xl font-bold text-custom-primary">Loading</p>
+						<PuffLoader color="#34b27b" />
 					</div> :
 					url ?
 						<>
