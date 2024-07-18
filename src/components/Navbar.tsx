@@ -33,7 +33,7 @@ const Navbar = () => {
 						</Menu>
 					</div>
 					:
-					<Link to={"/login"} className="bg-custom-gray py-2 px-3 font-bold text-lg rounded-md">
+					<Link to={"/login"} className="bg-custom-primary py-2 px-3 font-bold text-lg rounded-md">
 						Login
 					</Link>
 			}
