@@ -1,30 +1,63 @@
-# React + TypeScript + Vite
+# Shorter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Shorter is a user-friendly link shortening service that allows you to create shortened URLs and track their performance
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Features
 
-## Expanding the ESLint configuration
+- Shorten long URLs to easily shareable links
+- User authentication via GitHub or email
+- Click tracking for each shortened link
+- User dashboard to manage and view link statistics
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+# Tech Stack
 
-- Configure the top-level `parserOptions` property like this:
+- React
+- TypeScript
+- Supabase
+- TailwindCSS
+- Zod
+- React Hook Form
+- Sonner
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+# Getting Started
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Prerequisites
+
+- Node.js 22.5.^
+- Npm 
+- Supabase account
+
+## Setup
+
+1. Clone the repo
+    ```bash
+    git clone https://github.com/shadinmhd/shorter
+    ```
+
+2. Navigate to the cloned directory
+    ```bash
+    cd shorter
+    ```
+    
+3. install npm dependencies
+    ```bash
+    npm install
+    ```
+
+4. Create a .env file in the root directory and add your Supabase credentials:
+    ```bash
+    cat .env.example > .env
+    ```
+
+5. Start the development server
+    ```bash
+    npm run dev
+    ```
+
+# Usage
+
+1. Sign up or log in using your GitHub account or email.
+2. Enter the long URL you want to shorten in the provided input field.
+3. Click the "Shorten" button to generate a shortened link.
+4. View your shortened links and their click statistics in your dashboard.
